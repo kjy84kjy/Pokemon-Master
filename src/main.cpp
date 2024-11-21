@@ -343,7 +343,7 @@ int main() {
 
                 if (toPerform == 0) {
                     if (pokemon1.skillCount0 == 0) {
-                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName0 << ".\n";
+                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName0 << ".\n\n";
                         pokemon1.isTurn = false;
                         pokemon2.isTurn = true;
                     } else {
@@ -370,7 +370,7 @@ int main() {
                     }
                 } else if (toPerform == 1) {
                     if (pokemon1.skillCount1 == 0) {
-                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName1 << ".\n";
+                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName1 << ".\n\n";
                         pokemon1.isTurn = false;
                         pokemon2.isTurn = true;
                     } else {
@@ -397,7 +397,7 @@ int main() {
                     }
                 } else if (toPerform == 2) {
                     if (pokemon1.skillCount2 == 0) {
-                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName2 << ".\n";
+                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName2 << ".\n\n";
                         pokemon1.isTurn = false;
                         pokemon2.isTurn = true;
                     } else {
@@ -424,7 +424,7 @@ int main() {
                     }
                 } else if (toPerform == 3) {
                     if (pokemon1.skillCount3 == 0) {
-                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName3 << ".\n";
+                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName3 << ".\n\n";
                         pokemon1.isTurn = false;
                         pokemon2.isTurn = true;
                     } else {
@@ -463,11 +463,11 @@ int main() {
 
                 if (toPerform == 0) {
                     if (pokemon2.skillCount0 == 0) {
-                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName0 << ".\n";
+                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName0 << ".\n\n";
                         pokemon2.isTurn = false;
                         pokemon1.isTurn = true;
                     } else {
-                        cout << pokemon2.name << " used " << pokemon1.skillName0 << ".\n";
+                        cout << pokemon2.name << " used " << pokemon2.skillName0 << ".\n";
                         pokemon2.latestSkill = pokemon2.skillName0;
                         if (decision(pokemon2.skillType0, pokemon1.type) == 5) {
                             cout << "It was super effective.\n\n"; // TYPO HERE!!
@@ -490,7 +490,7 @@ int main() {
                     }
                 } else if (toPerform == 1) {
                     if (pokemon2.skillCount1 == 0) {
-                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName1 << ".\n";
+                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName1 << ".\n\n";
                         pokemon2.isTurn = false;
                         pokemon1.isTurn = true;
                     } else {
@@ -517,7 +517,7 @@ int main() {
                     }
                 } else if (toPerform == 2) {
                     if (pokemon2.skillCount2 == 0) {
-                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName2 << ".\n";
+                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName2 << ".\n\n";
                         pokemon2.isTurn = false;
                         pokemon1.isTurn = true;
                     } else {
@@ -544,7 +544,7 @@ int main() {
                     }
                 } else if (toPerform == 3) {
                     if (pokemon2.skillCount3 == 0) {
-                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName3 << ".\n";
+                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName3 << ".\n\n";
                         pokemon2.isTurn = false;
                         pokemon1.isTurn = true;
                     } else {
