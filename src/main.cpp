@@ -1,6 +1,23 @@
 #include <string>
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
+
+
+
+// [A00] Struct
+
+struct Pokemon {
+    string type, name;
+    string skillName0, skillName1, skillName2, skillName3;
+    string skillType0, skillType1, skillType2, skillType3;
+    int hp;
+    int skillDamage0, skillDamage1, skillDamage2, skillDamage3;
+    int skillCount0, skillCount1, skillCount2, skillCount3;
+    int maxUse0, maxUse1, maxUse2, maxUse3;
+    string latestSkill, effectiveness;
+    bool isTurn;
+};
 
 
 
@@ -29,11 +46,11 @@ void printLine(string somethingToPrint1, string somethingToPrint2) {
     int wordLength2 = somethingToPrint2.length();
     cout << "| " << somethingToPrint1;
     for (int i = 0; i < 29 - wordLength1; i++) {
-        cout << "-";
+        cout << " ";
     }
     cout << "| " << somethingToPrint2;
     for (int i = 0; i < 29 - wordLength2; i++) {
-        cout << "-";
+        cout << " ";
     }
     cout << "|\n";
 }
@@ -88,11 +105,11 @@ void printPokemonInfo(Pokemon object1, Pokemon object2) {
     if (object1.isTurn == true) {
         printLine(object1.name + " (*)", object2.name);
         printLine("Type: " + object1.type, "Type: " + object2.type);
-        printLine("HP: " + object1.hp, "HP: " + object2.hp);
+        printLine("HP: " + to_string(object1.hp), "HP: " + to_string(object2.hp));
     } else if (object2.isTurn == true) {
         printLine(object1.name, object2.name + " (*)");
         printLine("Type: " + object1.type, "Type: " + object2.type);
-        printLine("HP: " + object1.hp, "HP: " + object2.hp);
+        printLine("HP: " + to_string(object1.hp), "HP: " + to_string(object2.hp));
     } else {
         cerr << "ERROR! (code 01)";
     }
@@ -137,26 +154,14 @@ void printTurn(Pokemon object1, Pokemon object2) {
 
 
 
-// [A03] Structs
-
-struct Pokemon {
-    string type, name;
-    string skillName0, skillName1, skillName2, skillName3;
-    string skillType0, skillType1, skillType2, skillType3;
-    int hp;
-    int skillDamage0, skillDamage1, skillDamage2, skillDamage3;
-    int skillCount0, skillCount1, skillCount2, skillCount3;
-    int maxUse0, maxUse1, maxUse2, maxUse3;
-    string latestSkill, effectiveness;
-    bool isTurn;
-};
+// [A03] Pokemon Information
 
 void pokemonInit(Pokemon& object, int type, bool firstPokemon) {
 
     if (type == 0) {
         // Pikachu
         object.name = "Pikachu";
-        object.type = "Electic";
+        object.type = "Electric";
         object.hp = 35;
         object.skillName0 = "Tackle";
         object.skillType0 = "Normal";
@@ -326,8 +331,14 @@ int main() {
 
         // Step 2-2 : Pokemon Battle
         bool battleOnProgress = true;
+
+
+        printTurn(pokemon1, pokemon2);  // FOR TESTING ONLY! DELETE THIS
+
         while (battleOnProgress == true) {
-            // something
+
+            // printTurn(pokemon1, pokemon2);
+
         }
 
     }
