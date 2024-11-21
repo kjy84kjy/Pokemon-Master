@@ -83,6 +83,58 @@ int decision(string atkType, string defType) {
     return 0;  // effective for all the other cases
 }
 
+void printPokemonInfo(Pokemon object1, Pokemon object2) {
+    // Function for printing Pokemon Information
+    if (object1.isTurn == true) {
+        printLine(object1.name + " (*)", object2.name);
+        printLine("Type: " + object1.type, "Type: " + object2.type);
+        printLine("HP: " + object1.hp, "HP: " + object2.hp);
+    } else if (object2.isTurn == true) {
+        printLine(object1.name, object2.name + " (*)");
+        printLine("Type: " + object1.type, "Type: " + object2.type);
+        printLine("HP: " + object1.hp, "HP: " + object2.hp);
+    } else {
+        cerr << "ERROR! (code 01)";
+    }
+}
+
+void printPokemonLatest(Pokemon object1, Pokemon object2) {
+    // Function for printing Pokemon Latest Skill Info
+    printLine("Latest Skill: " + object1.latestSkill, "Latest Skill: " + object2.latestSkill);
+    printLine(object1.effectiveness, object2.effectiveness);
+}
+
+void printPokemonSkillInfo(Pokemon object1, Pokemon object2) {
+    // Function for printing Pokemons' Skill Info
+    printLine("(0) " + object1.skillName0, "(0) " + object2.skillName0);
+    printLine("    - Type: " + object1.skillType0, "    - Type: " + object2.skillType0);
+    printLine("    - Damage: " + to_string(object1.skillDamage0), "    - Damage: " + to_string(object2.skillDamage0));
+    printLine("    - Count: " + to_string(object1.skillCount0) + "(" + to_string(object1.maxUse0) + ")", "    - Count: " + to_string(object2.skillCount0) + "(" + to_string(object2.maxUse0) + ")");
+    printLine("(1) " + object1.skillName1, "(1) " + object2.skillName1);
+    printLine("    - Type: " + object1.skillType1, "    - Type: " + object2.skillType1);
+    printLine("    - Damage: " + to_string(object1.skillDamage1), "    - Damage: " + to_string(object2.skillDamage1));
+    printLine("    - Count: " + to_string(object1.skillCount1) + "(" + to_string(object1.maxUse1) + ")", "    - Count: " + to_string(object2.skillCount1) + "(" + to_string(object2.maxUse1) + ")");
+    printLine("(2) " + object1.skillName2, "(2) " + object2.skillName2);
+    printLine("    - Type: " + object1.skillType2, "    - Type: " + object2.skillType2);
+    printLine("    - Damage: " + to_string(object1.skillDamage2), "    - Damage: " + to_string(object2.skillDamage2));
+    printLine("    - Count: " + to_string(object1.skillCount2) + "(" + to_string(object1.maxUse2) + ")", "    - Count: " + to_string(object2.skillCount2) + "(" + to_string(object2.maxUse2) + ")");
+    printLine("(3) " + object1.skillName3, "(3) " + object2.skillName3);
+    printLine("    - Type: " + object1.skillType3, "    - Type: " + object2.skillType3);
+    printLine("    - Damage: " + to_string(object1.skillDamage3), "    - Damage: " + to_string(object2.skillDamage3));
+    printLine("    - Count: " + to_string(object1.skillCount3) + "(" + to_string(object1.maxUse3) + ")", "    - Count: " + to_string(object2.skillCount3) + "(" + to_string(object2.maxUse3) + ")");
+}
+
+void printTurn(Pokemon object1, Pokemon object2) {
+    // Integrated function for printing information of entire turn
+    printTitle();
+    printPokemonInfo(object1, object2);
+    printSep2();
+    printPokemonLatest(object1, object2);
+    printSep2();
+    printPokemonSkillInfo(object1, object2);
+    printSep2();
+}
+
 
 
 // [A03] Structs
@@ -276,7 +328,6 @@ int main() {
         bool battleOnProgress = true;
         while (battleOnProgress == true) {
             // something
-            printTitle();
         }
 
     }
