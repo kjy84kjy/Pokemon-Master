@@ -332,12 +332,258 @@ int main() {
         // Step 2-2 : Pokemon Battle
         bool battleOnProgress = true;
 
-
-        printTurn(pokemon1, pokemon2);  // FOR TESTING ONLY! DELETE THIS
-
         while (battleOnProgress == true) {
 
-            // printTurn(pokemon1, pokemon2);
+            printTurn(pokemon1, pokemon2);
+            cout << "Choose a skill (0~3): ";
+            int toPerform;
+            cin >> toPerform;
+
+            if (pokemon1.isTurn == true) {
+
+                if (toPerform == 0) {
+                    if (pokemon1.skillCount0 == 0) {
+                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName0 << ".\n";
+                        pokemon1.isTurn == false;
+                        pokemon2.isTurn == true;
+                    } else {
+                        cout << pokemon1.name << " used " << pokemon1.skillName0 << ".\n";
+                        pokemon1.latestSkill = pokemon1.skillName0;
+                        if (decision(pokemon1.skillType0, pokemon2.type) == 5) {
+                            cout << "It was super effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage0 + 5;
+                            pokemon1.skillCount0 -= 1;
+                            pokemon1.effectiveness = "It was super effective."; // TYPO HERE!!
+                        } else if (decision(pokemon1.skillType0, pokemon2.type) == -3) {
+                            cout << "It was not very effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage0 - 3;
+                            pokemon1.skillCount0 -= 1;
+                            pokemon1.effectiveness = "It was not very effective."; // TYPO HERE!!
+                        } else {
+                            cout << "It was effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage0;
+                            pokemon1.skillCount0 -= 1;
+                            pokemon1.effectiveness = "It was effective."; // TYPO HERE!!
+                        }
+                        pokemon1.isTurn == false;
+                        pokemon2.isTurn == true;
+                    }
+                } else if (toPerform == 1) {
+                    if (pokemon1.skillCount1 == 0) {
+                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName1 << ".\n";
+                        pokemon1.isTurn == false;
+                        pokemon2.isTurn == true;
+                    } else {
+                        cout << pokemon1.name << " used " << pokemon1.skillName1 << ".\n";
+                        pokemon1.latestSkill = pokemon1.skillName1;
+                        if (decision(pokemon1.skillType1, pokemon2.type) == 5) {
+                            cout << "It was super effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage1 + 5;
+                            pokemon1.skillCount1 -= 1;
+                            pokemon1.effectiveness = "It was super effective."; // TYPO HERE!!
+                        } else if (decision(pokemon1.skillType1, pokemon2.type) == -3) {
+                            cout << "It was not very effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage1 - 3;
+                            pokemon1.skillCount1 -= 1;
+                            pokemon1.effectiveness = "It was not very effective."; // TYPO HERE!!
+                        } else {
+                            cout << "It was effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage1;
+                            pokemon1.skillCount1 -= 1;
+                            pokemon1.effectiveness = "It was effective."; // TYPO HERE!!
+                        }
+                        pokemon1.isTurn == false;
+                        pokemon2.isTurn == true;
+                    }
+                } else if (toPerform == 2) {
+                    if (pokemon1.skillCount2 == 0) {
+                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName2 << ".\n";
+                        pokemon1.isTurn == false;
+                        pokemon2.isTurn == true;
+                    } else {
+                        cout << pokemon1.name << " used " << pokemon1.skillName2 << ".\n";
+                        pokemon1.latestSkill = pokemon1.skillName2;
+                        if (decision(pokemon1.skillType2, pokemon2.type) == 5) {
+                            cout << "It was super effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage2 + 5;
+                            pokemon1.skillCount2 -= 1;
+                            pokemon1.effectiveness = "It was super effective."; // TYPO HERE!!
+                        } else if (decision(pokemon1.skillType2, pokemon2.type) == -3) {
+                            cout << "It was not very effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage2 - 3;
+                            pokemon1.skillCount2 -= 1;
+                            pokemon1.effectiveness = "It was not very effective."; // TYPO HERE!!
+                        } else {
+                            cout << "It was effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage2;
+                            pokemon1.skillCount2 -= 1;
+                            pokemon1.effectiveness = "It was effective."; // TYPO HERE!!
+                        }
+                        pokemon1.isTurn == false;
+                        pokemon2.isTurn == true;
+                    }
+                } else if (toPerform == 3) {
+                    if (pokemon1.skillCount3 == 0) {
+                        cout << pokemon1.name << " failed to perform " << pokemon1.skillName3 << ".\n";
+                        pokemon1.isTurn == false;
+                        pokemon2.isTurn == true;
+                    } else {
+                        cout << pokemon1.name << " used " << pokemon1.skillName3 << ".\n";
+                        pokemon1.latestSkill = pokemon1.skillName3;
+                        if (decision(pokemon1.skillType3, pokemon2.type) == 5) {
+                            cout << "It was super effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage3 + 5;
+                            pokemon1.skillCount3 -= 1;
+                            pokemon1.effectiveness = "It was super effective."; // TYPO HERE!!
+                        } else if (decision(pokemon1.skillType0, pokemon2.type) == -3) {
+                            cout << "It was not very effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage3 - 3;
+                            pokemon1.skillCount3 -= 1;
+                            pokemon1.effectiveness = "It was not very effective."; // TYPO HERE!!
+                        } else {
+                            cout << "It was effective.\n\n"; // TYPO HERE!!
+                            pokemon2.hp -= pokemon1.skillDamage3;
+                            pokemon1.skillCount3 -= 1;
+                            pokemon1.effectiveness = "It was effective."; // TYPO HERE!!
+                        }
+                        pokemon1.isTurn == false;
+                        pokemon2.isTurn == true;
+                    }
+                } else {
+                    cerr << "ERROR! (code 03)";
+                }
+
+                if (pokemon2.hp <= 0) {
+                    battleOnProgress = false;
+                    cout << "===============================================================";
+                    cout << "Match Result: " << pokemon1.name << " defeats " << pokemon2.name;
+                }
+
+            } else if (pokemon2.isTurn == true) {
+
+                if (toPerform == 0) {
+                    if (pokemon2.skillCount0 == 0) {
+                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName0 << ".\n";
+                        pokemon2.isTurn == false;
+                        pokemon1.isTurn == true;
+                    } else {
+                        cout << pokemon2.name << " used " << pokemon1.skillName0 << ".\n";
+                        pokemon2.latestSkill = pokemon2.skillName0;
+                        if (decision(pokemon2.skillType0, pokemon1.type) == 5) {
+                            cout << "It was super effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage0 + 5;
+                            pokemon2.skillCount0 -= 1;
+                            pokemon2.effectiveness = "It was super effective."; // TYPO HERE!!
+                        } else if (decision(pokemon2.skillType0, pokemon1.type) == -3) {
+                            cout << "It was not very effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage0 - 3;
+                            pokemon2.skillCount0 -= 1;
+                            pokemon2.effectiveness = "It was not very effective."; // TYPO HERE!!
+                        } else {
+                            cout << "It was effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage0;
+                            pokemon2.skillCount0 -= 1;
+                            pokemon2.effectiveness = "It was effective."; // TYPO HERE!!
+                        }
+                        pokemon2.isTurn == false;
+                        pokemon1.isTurn == true;
+                    }
+                } else if (toPerform == 1) {
+                    if (pokemon2.skillCount1 == 0) {
+                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName1 << ".\n";
+                        pokemon2.isTurn == false;
+                        pokemon1.isTurn == true;
+                    } else {
+                        cout << pokemon2.name << " used " << pokemon2.skillName1 << ".\n";
+                        pokemon2.latestSkill = pokemon2.skillName1;
+                        if (decision(pokemon2.skillType1, pokemon1.type) == 5) {
+                            cout << "It was super effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage1 + 5;
+                            pokemon2.skillCount1 -= 1;
+                            pokemon2.effectiveness = "It was super effective."; // TYPO HERE!!
+                        } else if (decision(pokemon2.skillType1, pokemon1.type) == -3) {
+                            cout << "It was not very effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage1 - 3;
+                            pokemon2.skillCount1 -= 1;
+                            pokemon2.effectiveness = "It was not very effective."; // TYPO HERE!!
+                        } else {
+                            cout << "It was effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage1;
+                            pokemon2.skillCount1 -= 1;
+                            pokemon2.effectiveness = "It was effective."; // TYPO HERE!!
+                        }
+                        pokemon2.isTurn == false;
+                        pokemon1.isTurn == true;
+                    }
+                } else if (toPerform == 2) {
+                    if (pokemon2.skillCount2 == 0) {
+                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName2 << ".\n";
+                        pokemon2.isTurn == false;
+                        pokemon1.isTurn == true;
+                    } else {
+                        cout << pokemon2.name << " used " << pokemon2.skillName2 << ".\n";
+                        pokemon2.latestSkill = pokemon2.skillName2;
+                        if (decision(pokemon2.skillType2, pokemon1.type) == 5) {
+                            cout << "It was super effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage2 + 5;
+                            pokemon2.skillCount2 -= 1;
+                            pokemon2.effectiveness = "It was super effective."; // TYPO HERE!!
+                        } else if (decision(pokemon2.skillType2, pokemon1.type) == -3) {
+                            cout << "It was not very effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage2 - 3;
+                            pokemon2.skillCount2 -= 1;
+                            pokemon2.effectiveness = "It was not very effective."; // TYPO HERE!!
+                        } else {
+                            cout << "It was effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage2;
+                            pokemon2.skillCount2 -= 1;
+                            pokemon2.effectiveness = "It was effective."; // TYPO HERE!!
+                        }
+                        pokemon2.isTurn == false;
+                        pokemon1.isTurn == true;
+                    }
+                } else if (toPerform == 3) {
+                    if (pokemon2.skillCount3 == 0) {
+                        cout << pokemon2.name << " failed to perform " << pokemon2.skillName3 << ".\n";
+                        pokemon2.isTurn == false;
+                        pokemon1.isTurn == true;
+                    } else {
+                        cout << pokemon2.name << " used " << pokemon2.skillName3 << ".\n";
+                        pokemon2.latestSkill = pokemon2.skillName3;
+                        if (decision(pokemon2.skillType3, pokemon1.type) == 5) {
+                            cout << "It was super effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage3 + 5;
+                            pokemon2.skillCount3 -= 1;
+                            pokemon2.effectiveness = "It was super effective."; // TYPO HERE!!
+                        } else if (decision(pokemon2.skillType0, pokemon1.type) == -3) {
+                            cout << "It was not very effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage3 - 3;
+                            pokemon2.skillCount3 -= 1;
+                            pokemon2.effectiveness = "It was not very effective."; // TYPO HERE!!
+                        } else {
+                            cout << "It was effective.\n\n"; // TYPO HERE!!
+                            pokemon1.hp -= pokemon2.skillDamage3;
+                            pokemon2.skillCount3 -= 1;
+                            pokemon2.effectiveness = "It was effective."; // TYPO HERE!!
+                        }
+                        pokemon2.isTurn == false;
+                        pokemon1.isTurn == true;
+                    }
+                } else {
+                    cerr << "ERROR! (code 03)";
+                }
+
+                if (pokemon1.hp <= 0) {
+                    battleOnProgress = false;
+                    cout << "===============================================================";
+                    cout << "Match Result: " << pokemon2.name << " defeats " << pokemon1.name;
+                }
+
+            } else {
+
+                cerr << "ERROR! (code 02)";
+
+            }
 
         }
 
