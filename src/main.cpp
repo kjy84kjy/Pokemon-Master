@@ -344,8 +344,8 @@ int main() {
                 if (toPerform == 0) {
                     if (pokemon1.skillCount0 == 0) {
                         cout << pokemon1.name << " failed to perform " << pokemon1.skillName0 << ".\n";
-                        pokemon1.isTurn == false;
-                        pokemon2.isTurn == true;
+                        pokemon1.isTurn = false;
+                        pokemon2.isTurn = true;
                     } else {
                         cout << pokemon1.name << " used " << pokemon1.skillName0 << ".\n";
                         pokemon1.latestSkill = pokemon1.skillName0;
@@ -365,14 +365,14 @@ int main() {
                             pokemon1.skillCount0 -= 1;
                             pokemon1.effectiveness = "It was effective."; // TYPO HERE!!
                         }
-                        pokemon1.isTurn == false;
-                        pokemon2.isTurn == true;
+                        pokemon1.isTurn = false;
+                        pokemon2.isTurn = true;
                     }
                 } else if (toPerform == 1) {
                     if (pokemon1.skillCount1 == 0) {
                         cout << pokemon1.name << " failed to perform " << pokemon1.skillName1 << ".\n";
-                        pokemon1.isTurn == false;
-                        pokemon2.isTurn == true;
+                        pokemon1.isTurn = false;
+                        pokemon2.isTurn = true;
                     } else {
                         cout << pokemon1.name << " used " << pokemon1.skillName1 << ".\n";
                         pokemon1.latestSkill = pokemon1.skillName1;
@@ -392,14 +392,14 @@ int main() {
                             pokemon1.skillCount1 -= 1;
                             pokemon1.effectiveness = "It was effective."; // TYPO HERE!!
                         }
-                        pokemon1.isTurn == false;
-                        pokemon2.isTurn == true;
+                        pokemon1.isTurn = false;
+                        pokemon2.isTurn = true;
                     }
                 } else if (toPerform == 2) {
                     if (pokemon1.skillCount2 == 0) {
                         cout << pokemon1.name << " failed to perform " << pokemon1.skillName2 << ".\n";
-                        pokemon1.isTurn == false;
-                        pokemon2.isTurn == true;
+                        pokemon1.isTurn = false;
+                        pokemon2.isTurn = true;
                     } else {
                         cout << pokemon1.name << " used " << pokemon1.skillName2 << ".\n";
                         pokemon1.latestSkill = pokemon1.skillName2;
@@ -419,14 +419,14 @@ int main() {
                             pokemon1.skillCount2 -= 1;
                             pokemon1.effectiveness = "It was effective."; // TYPO HERE!!
                         }
-                        pokemon1.isTurn == false;
-                        pokemon2.isTurn == true;
+                        pokemon1.isTurn = false;
+                        pokemon2.isTurn = true;
                     }
                 } else if (toPerform == 3) {
                     if (pokemon1.skillCount3 == 0) {
                         cout << pokemon1.name << " failed to perform " << pokemon1.skillName3 << ".\n";
-                        pokemon1.isTurn == false;
-                        pokemon2.isTurn == true;
+                        pokemon1.isTurn = false;
+                        pokemon2.isTurn = true;
                     } else {
                         cout << pokemon1.name << " used " << pokemon1.skillName3 << ".\n";
                         pokemon1.latestSkill = pokemon1.skillName3;
@@ -446,8 +446,8 @@ int main() {
                             pokemon1.skillCount3 -= 1;
                             pokemon1.effectiveness = "It was effective."; // TYPO HERE!!
                         }
-                        pokemon1.isTurn == false;
-                        pokemon2.isTurn == true;
+                        pokemon1.isTurn = false;
+                        pokemon2.isTurn = true;
                     }
                 } else {
                     cerr << "ERROR! (code 03)";
@@ -464,8 +464,8 @@ int main() {
                 if (toPerform == 0) {
                     if (pokemon2.skillCount0 == 0) {
                         cout << pokemon2.name << " failed to perform " << pokemon2.skillName0 << ".\n";
-                        pokemon2.isTurn == false;
-                        pokemon1.isTurn == true;
+                        pokemon2.isTurn = false;
+                        pokemon1.isTurn = true;
                     } else {
                         cout << pokemon2.name << " used " << pokemon1.skillName0 << ".\n";
                         pokemon2.latestSkill = pokemon2.skillName0;
@@ -485,14 +485,14 @@ int main() {
                             pokemon2.skillCount0 -= 1;
                             pokemon2.effectiveness = "It was effective."; // TYPO HERE!!
                         }
-                        pokemon2.isTurn == false;
-                        pokemon1.isTurn == true;
+                        pokemon2.isTurn = false;
+                        pokemon1.isTurn = true;
                     }
                 } else if (toPerform == 1) {
                     if (pokemon2.skillCount1 == 0) {
                         cout << pokemon2.name << " failed to perform " << pokemon2.skillName1 << ".\n";
-                        pokemon2.isTurn == false;
-                        pokemon1.isTurn == true;
+                        pokemon2.isTurn = false;
+                        pokemon1.isTurn = true;
                     } else {
                         cout << pokemon2.name << " used " << pokemon2.skillName1 << ".\n";
                         pokemon2.latestSkill = pokemon2.skillName1;
@@ -512,14 +512,14 @@ int main() {
                             pokemon2.skillCount1 -= 1;
                             pokemon2.effectiveness = "It was effective."; // TYPO HERE!!
                         }
-                        pokemon2.isTurn == false;
-                        pokemon1.isTurn == true;
+                        pokemon2.isTurn = false;
+                        pokemon1.isTurn = true;
                     }
                 } else if (toPerform == 2) {
                     if (pokemon2.skillCount2 == 0) {
                         cout << pokemon2.name << " failed to perform " << pokemon2.skillName2 << ".\n";
-                        pokemon2.isTurn == false;
-                        pokemon1.isTurn == true;
+                        pokemon2.isTurn = false;
+                        pokemon1.isTurn = true;
                     } else {
                         cout << pokemon2.name << " used " << pokemon2.skillName2 << ".\n";
                         pokemon2.latestSkill = pokemon2.skillName2;
@@ -539,14 +539,14 @@ int main() {
                             pokemon2.skillCount2 -= 1;
                             pokemon2.effectiveness = "It was effective."; // TYPO HERE!!
                         }
-                        pokemon2.isTurn == false;
-                        pokemon1.isTurn == true;
+                        pokemon2.isTurn = false;
+                        pokemon1.isTurn = true;
                     }
                 } else if (toPerform == 3) {
                     if (pokemon2.skillCount3 == 0) {
                         cout << pokemon2.name << " failed to perform " << pokemon2.skillName3 << ".\n";
-                        pokemon2.isTurn == false;
-                        pokemon1.isTurn == true;
+                        pokemon2.isTurn = false;
+                        pokemon1.isTurn = true;
                     } else {
                         cout << pokemon2.name << " used " << pokemon2.skillName3 << ".\n";
                         pokemon2.latestSkill = pokemon2.skillName3;
@@ -566,8 +566,8 @@ int main() {
                             pokemon2.skillCount3 -= 1;
                             pokemon2.effectiveness = "It was effective."; // TYPO HERE!!
                         }
-                        pokemon2.isTurn == false;
-                        pokemon1.isTurn == true;
+                        pokemon2.isTurn = false;
+                        pokemon1.isTurn = true;
                     }
                 } else {
                     cerr << "ERROR! (code 03)";
