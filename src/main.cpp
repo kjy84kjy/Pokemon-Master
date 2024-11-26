@@ -456,7 +456,7 @@ int main() {
                 if (pokemon2.hp <= 0) {
                     battleOnProgress = false;
                     cout << "===============================================================\n";
-                    cout << "Match Result: " << pokemon1.name << " defeats " << pokemon2.name;
+                    cout << "Match Result: " << pokemon1.name << " defeats " << pokemon2.name << "\n";
                 }
 
             } else if (pokemon2.isTurn == true) {
@@ -576,7 +576,7 @@ int main() {
                 if (pokemon1.hp <= 0) {
                     battleOnProgress = false;
                     cout << "===============================================================\n";
-                    cout << "Match Result: " << pokemon2.name << " defeats " << pokemon1.name;
+                    cout << "Match Result: " << pokemon2.name << " defeats " << pokemon1.name << "\n";
                 }
 
             } else {
