@@ -314,7 +314,7 @@ int main() {
     int pokemonName1, pokemonName2;
     cout << "Choose a Pokemon(0~4): ";
     cin >> pokemonName1;
-    cout << "Choose another Pokemon(0~4): ";
+    cout << "Choose a Pokemon(0~4): ";
     cin >> pokemonName2;
 
     if (pokemonName1 == pokemonName2) {
