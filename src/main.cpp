@@ -483,7 +483,7 @@ int main() {
                             pokemon2.hp -= pokemon1.skillDamage3 + 5;
                             pokemon1.skillCount3 -= 1;
                             pokemon1.effectiveness = "It was super effective."; // TYPO HERE!!
-                        } else if (decision(pokemon1.skillType0, pokemon2.type) == -3) {
+                        } else if (decision(pokemon1.skillType3, pokemon2.type) == -3) {
                             cout << "It was not very effective.\n\n"; // TYPO HERE!!
                             pokemon2.hp -= pokemon1.skillDamage3 - 3;
                             pokemon1.skillCount3 -= 1;
@@ -611,7 +611,7 @@ int main() {
                             pokemon1.hp -= pokemon2.skillDamage3 + 5;
                             pokemon2.skillCount3 -= 1;
                             pokemon2.effectiveness = "It was super effective."; // TYPO HERE!!
-                        } else if (decision(pokemon2.skillType0, pokemon1.type) == -3) {
+                        } else if (decision(pokemon2.skillType3, pokemon1.type) == -3) {
                             cout << "It was not very effective.\n\n"; // TYPO HERE!!
                             pokemon1.hp -= pokemon2.skillDamage3 - 3;
                             pokemon2.skillCount3 -= 1;
